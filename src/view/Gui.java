@@ -27,8 +27,8 @@ public class Gui extends JFrame{
     Model m;
     ArrayList<Kachel> kacheln;
 	
-	  JLabel labelx = new JLabel("Gebe die X Position 1-9 ein");
-	  JLabel labely = new JLabel("Gebe die Y Position 1-9 ein");
+	  JLabel labelx = new JLabel("Gebe die X Position ein");
+	  JLabel labely = new JLabel("Gebe die Y Position ein");
 	  JLabel labelColor = new JLabel("0: Grau|leer,1: grün|zerbrechbarer Block, 2: blau|fester Block");
 	  JLabel lblFile = new JLabel("Geben sie den Filename ein");
 	  JTextField textfieldColor = new JTextField();
@@ -39,7 +39,7 @@ public class Gui extends JFrame{
       JButton btn = new JButton("Zum Block machen");
 	  
     public Gui() {
-    Dimension windowSize = new Dimension(800, 600);
+    Dimension windowSize = new Dimension(1000, 600);
     setSize(windowSize);
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     int windowPositionX = (screenSize.width - windowSize.width) / 2;
@@ -62,17 +62,17 @@ public class Gui extends JFrame{
       protected void paintComponent(Graphics g) {
     	super.paintComponent(g);
           //drawSquare(g, hoehe,breite);
-    	
-    	  labelx.setBounds(420,10,200,20);
-    	  labely.setBounds(420,50,200,20);
-    	  labelColor.setBounds(420,90,400,20);
-           textfieldX.setBounds(420, 30, 80, 20);
-            textfieldColor.setBounds(420,110,80,20);
-           textfieldY.setBounds(420, 70, 80, 20);
-            lblFile.setBounds(420,160,200, 20);
-            fileName.setBounds(420,180,80,20);
-            savebtn.setBounds(420,200,80,20);
-           btn.setBounds(420, 140, 80, 20);
+
+    	  labelx.setBounds(520,10,200,20);
+    	  labely.setBounds(520,50,200,20);
+    	  labelColor.setBounds(520,90,400,20);
+           textfieldX.setBounds(520, 30, 80, 20);
+            textfieldColor.setBounds(520,110,80,20);
+           textfieldY.setBounds(520, 70, 80, 20);
+            lblFile.setBounds(520,160,200, 20);
+            fileName.setBounds(520,180,80,20);
+            savebtn.setBounds(520,200,80,20);
+           btn.setBounds(520, 140, 80, 20);
            add(lblFile);
            add(savebtn);
            add(fileName);
