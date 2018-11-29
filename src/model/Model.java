@@ -1,5 +1,9 @@
 package model;
 
+import model.saver.Save;
+import model.saver.SaveCSV;
+import model.saver.SaveTXT;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.awt.Color;
@@ -46,6 +50,16 @@ public class Model {
 		}
 	}
 
+
+	public void saveByType(String fname){
+	ArrayList<Save> save = new ArrayList<>();
+	save.add(new SaveTXT());
+
+		for (Save s: save) {
+			s.save(fname,kacheln);
+		}
+	}
+
 	public void importLabyrinth(String fName){
 		try {
 			Scanner scn = new Scanner(new File(fName));
@@ -54,7 +68,7 @@ public class Model {
 				for (Kachel kachel : kacheln) {
 					if(kachel.getX() == Integer.parseInt(scn.next()) && kachel.getY()== Integer.parseInt(scn.next())){
 
-					//	kachel.setColor();
+						//	kachel.setColor();
 
 					}
 				}
@@ -63,9 +77,6 @@ public class Model {
 			e.printStackTrace();
 		}
 	}
-
-
-
 
 
 }

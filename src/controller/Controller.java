@@ -52,7 +52,7 @@ public class Controller extends JFrame {
             String fName;
             try{
                 fName = g.returnFileName();
-                m.saveState(fName);
+                m.saveByType(fName);
             }
             catch (NullPointerException n){
                 g.displayErrorMessage("Geben Sie einen Filename ein");
