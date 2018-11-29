@@ -3,6 +3,8 @@ package model;
 import model.saver.Save;
 import model.saver.SaveCSV;
 import model.saver.SaveTXT;
+import model.validator.ValidateCourner;
+import model.validator.Validater;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -76,6 +78,20 @@ public class Model {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public boolean validate(int h, int b){
+
+		ArrayList<Validater> valid = new ArrayList<>();
+		valid.add(new ValidateCourner());
+		for(Validater v : valid){
+			if(v.validate(kacheln,h,b)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		return false;
 	}
 
 

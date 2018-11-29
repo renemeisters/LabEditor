@@ -52,7 +52,11 @@ public class Controller extends JFrame {
             String fName;
             try{
                 fName = g.returnFileName();
-                m.saveByType(fName);
+                /*if(!m.validate(hoehe, breite)){
+                    g.displayErrorMessage("Die Ecken müssen leere Blöcke sein");
+                }else {*/
+                    m.saveByType(fName);
+                //}
             }
             catch (NullPointerException n){
                 g.displayErrorMessage("Geben Sie einen Filename ein");
