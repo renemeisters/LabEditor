@@ -1,8 +1,7 @@
 package model;
 
 import model.saver.Save;
-import model.saver.SaveCSV;
-import model.saver.SaveTXT;
+import model.saver.SaveJSON;
 import model.validator.ValidateCourner;
 import model.validator.Validater;
 
@@ -55,7 +54,7 @@ public class Model {
 
 	public void saveByType(String fname){
 	ArrayList<Save> save = new ArrayList<>();
-	save.add(new SaveTXT());
+	save.add(new SaveJSON());
 
 		for (Save s: save) {
 			s.save(fname,kacheln);
