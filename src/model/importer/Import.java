@@ -1,6 +1,10 @@
 package model.importer;
 
+import model.Kachel;
+
+import java.util.ArrayList;
+
 public interface Import {
 
-    void importFile(String fname);
+    void importFile(String fName, ArrayList<Kachel> kacheln);
 }
